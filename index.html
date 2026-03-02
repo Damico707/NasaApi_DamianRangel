@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Space Explorer | Pro Edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <h1>NASA Explorer</h1>
+  <div style="display:flex; gap:10px;">
+    <button class="btn btn-primary" onclick="showFavorites()">⭐ Favoritos</button>
+    <button class="btn btn-secondary" onclick="showLater()">✅ Ver después</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <h2>Descubre el Cosmos</h2>
+  <p>Explora la Imagen Astronómica del Día (APOD)</p>
+</section>
+
+<div class="controls">
+  <div class="date-field">
+    <label for="fecha-inicio">Fecha inicio</label>
+    <input type="date" id="start">
+  </div>
+  <div class="date-field">
+    <label for="fecha-final">Fecha final</label>
+    <input type="date" id="end">
+  </div>
+  <div class="controls-btns">
+    <button class="btn btn-primary" onclick="loadRange()">🔍 Buscar Rango</button>
+    <button class="btn btn-primary" style="background:#334155; color:white;" onclick="loadToday()">📅 Hoy</button>
+  </div>
+</div>
+
+<div id="statusContainer"></div>
+<div class="gallery" id="gallery"></div>
+
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal()">✕</button>
+    <div id="modalBody" class="modal-body"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
